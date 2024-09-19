@@ -17,10 +17,6 @@ public class DinnerConstructor {
         }
     }
 
-    public ArrayList<String> getType(String dishType) {
-        return dishList.get(dishType);
-    }
-
     private String[] decodeDinner(int combo, String[] dishTypes) {
         int[] choices = ComboGenerator.readCombo(combo,
                 Arrays.stream(dishTypes).map(d -> dishList.get(d).size()).mapToInt(i -> i).toArray());
